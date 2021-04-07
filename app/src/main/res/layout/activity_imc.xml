@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".imc">
+
+    <TextView
+        android:id="@+id/TvInformacion"
+        android:layout_width="364dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="19dp"
+        android:text="TextView"
+
+        android:textAlignment="center"
+        android:textColor="@color/black"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtPeso"
+        android:layout_width="330dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="44dp"
+        android:ems="10"
+        android:inputType="number"
+
+        android:hint="Peso"
+        android:textAlignment="center"
+        android:textColorHint="@color/black"
+
+        app:layout_constraintBottom_toTopOf="@+id/txtAltura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvInformacion"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="198dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="11dp"
+
+
+        android:layout_marginBottom="20dp"
+        android:text="Calcular"
+        app:layout_constraintBottom_toTopOf="@+id/ImEstatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAltura" />
+
+    <ImageView
+        android:id="@+id/ImEstatus"
+        android:layout_width="138dp"
+        android:layout_height="156dp"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/TvResultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalcular"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/TvResultado"
+        android:layout_width="279dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="40dp"
+        android:text="TextView"
+
+        android:textAlignment="center"
+        android:textColor="@color/black"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ImEstatus" />
+
+    <EditText
+        android:id="@+id/txtAltura"
+        android:layout_width="344dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="11dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+
+        android:hint="Altura"
+        android:textAlignment="center"
+        android:textColorHint="@color/black"
+
+        app:layout_constraintBottom_toTopOf="@+id/btnCalcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPeso" />
+</androidx.constraintlayout.widget.ConstraintLayout>
